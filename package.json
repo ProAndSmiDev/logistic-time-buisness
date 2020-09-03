@@ -1,0 +1,31 @@
+{
+  "name": "Logistic-Time",
+  "version": "1.0.0",
+  "description": "Logistic-Time's task",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "server": "gulp serve"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "node-sass": "^4.14.1"
+  },
+  "author": "AndSmi",
+  "license": "ISC"
+}

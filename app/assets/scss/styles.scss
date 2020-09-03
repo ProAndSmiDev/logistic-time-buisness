@@ -1,0 +1,116 @@
+@import "./variables";
+@import "./mixins";
+@import "./animations";
+
+@include font-family("Lato", "Lato", "LatoRegular", 400);
+@include font-family("Lato", "Lato", "LatoBold", 700);
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  @include media($width: phone) {
+    padding: 0;
+  }
+  @include media($width: pc) {
+    padding: 0 0 20px;
+  }
+  min-height: 100vh;
+  @include font-styles($default-size, $default-color, $default-weight, $default-lh, $default-family);
+}
+
+.wrapper {
+  display: flex;
+  @include media(phone) {
+    width: $wrapper-phone;
+  }
+  @include media(pc) {
+    width: $wrapper-pc;
+  }
+  @include media(desktop) {
+    width: $wrapper-desktop;
+  }
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  position: relative;
+  transition: color .4s ease-out;
+  @include font-styles($color: $default-link);
+  &:hover {
+    @include font-styles($color: $default-hover-link);
+  }
+}
+
+input {
+  border: $default-border;
+  @include input-placeholder;
+  background: $bg-default-input;
+  @include font-styles($size: $default-placeholder-size, $color: $default-placeholder-color);
+}
+
+ul, ol {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+button {
+  border: $default-border;
+  cursor: pointer;
+  background: {
+    color: $bg-default-button;
+  }
+  transition: {
+    duration: .4s;
+    property: background-color;
+    timing-function: ease-in-out;
+  }
+  &:hover {
+    background: {
+      color: $bg-default-hover-button;
+    }
+  }
+}
+
+input, textarea, select, button {
+  font: inherit;
+}
+
+.sr-only {
+  border: 0;
+  width: 1px;
+  padding: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.title {
+  font: {
+    size: 36px;
+    weight: 800;
+  }
+  margin-bottom: 20px;
+  @include font-styles($size: $default-title-size, $color: $default-title-color);
+}
