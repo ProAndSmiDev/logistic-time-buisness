@@ -1,0 +1,16 @@
+.logo-text {
+  color: #ffffff;
+  @include media(phone) {
+    font-size: 22px;
+  }
+  @include media(pc) {
+    font-size: 28px;
+  }
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: Raleway, Arial, Roboto, sans-serif;
+
+  span {
+    color: #42a9ed;
+  }
+}

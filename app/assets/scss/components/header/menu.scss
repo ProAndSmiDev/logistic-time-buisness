@@ -1,0 +1,138 @@
+.nav {
+  .menu {
+    @include media(phone) {
+      top: 100%;
+      left: -100%;
+      width: 100%;
+      position: absolute;
+      flex-direction: column;
+      border-top: 1px solid #10101d;
+      background-color: rgb(16,16,29);
+      transition: left .4s ease-in-out;
+
+      &.active {
+        left: 0;
+      }
+    }
+    @include media(pc) {
+      border: 0;
+      position: static;
+      transition: unset;
+      flex-direction: row;
+      background-color: transparent;
+    }
+    &__item {
+      @include media(phone) {
+        width: 100%;
+        text-align: center;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid #4f4f73;
+        }
+      }
+
+      @include media(pc) {
+        width: auto;
+        &:not(:last-child) {
+          border-bottom: 0;
+          margin-right: 59px;
+        }
+      }
+    }
+
+    &__link {
+      @include media(phone) {
+        width: 100%;
+        display: block;
+        padding: 10px 15px;
+        transition: background-color .4s ease-in-out;
+        &.active,
+        &:hover {
+          color: #fff;
+          background-color: #272733;
+        }
+      }
+      @include media(pc) {
+        padding: 0;
+        width: auto;
+        display: inline;
+        transition: color .4s ease-out;
+        &.active,
+        &:hover {
+          color: $hover-link-color;
+          background-color: transparent;
+        }
+      }
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  &__burger {
+    border: 0;
+    width: 24px;
+    height: 20px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: transparent;
+
+    span {
+      height: 2px;
+      width: 100%;
+      display: block;
+      background-color: #fff;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &.active {
+      justify-content: center;
+      span {
+        display: none;
+      }
+
+      &:before,
+      &:after {
+        position: relative;
+      }
+
+      &:before {
+        top: 1px;
+        transform: rotateZ(-45deg);
+      }
+
+      &:after {
+        bottom: 0;
+        transform: rotateZ(45deg);
+      }
+    }
+
+    &:after,
+    &:before {
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 2px;
+      display: block;
+      background-color: #fff;
+      transition: transform .4s ease-in-out;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    @include media(pc) {
+      display: none;
+    }
+  }
+}

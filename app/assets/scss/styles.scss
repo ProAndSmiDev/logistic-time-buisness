@@ -4,6 +4,7 @@
 
 @include font-family("Lato", "Lato", "LatoRegular", 400);
 @include font-family("Lato", "Lato", "LatoBold", 700);
+@include font-family("Raleway", "Raleway", "Raleway-ExtraBold", 800);
 
 *,
 *:after,
@@ -32,11 +33,12 @@ body {
   @include media(desktop) {
     width: $wrapper-desktop;
   }
-  align-items: center;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding-right: 15px;
+  margin: 0 auto;
   padding-left: 15px;
+  padding-right: 15px;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 img {
@@ -45,10 +47,13 @@ img {
 }
 
 a {
+  letter-spacing: 0;
   position: relative;
+  text-decoration: none;
   transition: color .4s ease-out;
   @include font-styles($color: $link-color);
-  &:hover {
+  &:hover,
+  &.active {
     @include font-styles($color: $hover-link-color);
   }
 }
@@ -77,6 +82,7 @@ ul, ol {
 }
 
 button {
+  outline: 0;
   border: $border;
   cursor: pointer;
   background: {
@@ -115,4 +121,10 @@ input, textarea, select, button {
   span {
     @include font-styles($color: $title-span-color);
   }
+}
+
+@import "./components/header";
+
+main, footer {
+  display: none;
 }

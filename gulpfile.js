@@ -105,7 +105,7 @@ gulp.task('serve', () => {
 gulp.task('watch', () => {
   gulp.watch(dev.js, gulp.series(['js']));
   gulp.watch(dev.html, gulp.series(['html']));
-  gulp.watch(root.dev + '/assets/sass/**/*.scss', gulp.series(['sass']));
+  gulp.watch(root.dev + '/assets/scss/**/*.scss', gulp.series(['sass']));
 });
 
 gulp.task('default', gulp.parallel([
