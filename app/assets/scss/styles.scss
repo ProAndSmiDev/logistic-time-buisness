@@ -81,7 +81,7 @@ ul, ol {
   justify-content: center;
 }
 
-button {
+.button {
   outline: 0;
   border: $border;
   cursor: pointer;
@@ -125,6 +125,8 @@ input, textarea, select, button {
 
 @import "./components/header";
 
-main, footer {
+@import "./components/main";
+
+footer {
   display: none;
 }
