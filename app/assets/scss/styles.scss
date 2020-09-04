@@ -15,14 +15,10 @@
 
 body {
   margin: 0;
-  @include media($width: phone) {
-    padding: 0;
-  }
-  @include media($width: pc) {
-    padding: 0 0 20px;
-  }
+  padding: 0;
   min-height: 100vh;
-  @include font-styles($default-size, $default-color, $default-weight, $default-lh, $default-family);
+  position: relative;
+  @include font-styles($text-size, $text-color, $font-weight, $lh-size, $font-family);
 }
 
 .wrapper {
@@ -51,17 +47,24 @@ img {
 a {
   position: relative;
   transition: color .4s ease-out;
-  @include font-styles($color: $default-link);
+  @include font-styles($color: $link-color);
   &:hover {
-    @include font-styles($color: $default-hover-link);
+    @include font-styles($color: $hover-link-color);
   }
 }
 
 input {
-  border: $default-border;
-  @include input-placeholder;
-  background: $bg-default-input;
-  @include font-styles($size: $default-placeholder-size, $color: $default-placeholder-color);
+  border: $border;
+  border-radius: 3px;
+  @include input-placeholder {
+    @include font-styles($size: 18px, $color: #272733);
+  }
+  background-color: $bg-input;
+  @include font-styles($size: $placeholder-size, $color: $placeholder-color);
+  &:focus {
+    background-color: $focus-field-bg-color;
+    @include font-styles($color: $focus-field-text-color);
+  }
 }
 
 ul, ol {
@@ -74,10 +77,10 @@ ul, ol {
 }
 
 button {
-  border: $default-border;
+  border: $border;
   cursor: pointer;
   background: {
-    color: $bg-default-button;
+    color: $bg-button;
   }
   transition: {
     duration: .4s;
@@ -86,7 +89,7 @@ button {
   }
   &:hover {
     background: {
-      color: $bg-default-hover-button;
+      color: $bg-hover-button;
     }
   }
 }
@@ -107,10 +110,9 @@ input, textarea, select, button {
 }
 
 .title {
-  font: {
-    size: 36px;
-    weight: 800;
-  }
   margin-bottom: 20px;
-  @include font-styles($size: $default-title-size, $color: $default-title-color);
+  @include font-styles($size: $title-size, $color: $title-color, $weight: 800);
+  span {
+    @include font-styles($color: $title-span-color);
+  }
 }

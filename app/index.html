@@ -12,16 +12,143 @@
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
-    <header>
-
+    <header class="header">
+      <div class="wrapper">
+        <div class="logo-text">
+          loremipsum.<span>net</span>
+        </div>
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu__item"><a href="#business" class="menu__link">Бизнес</a></li>
+            <li class="menu__item"><a href="#about-us" class="menu__link">О нас</a></li>
+            <li class="menu__item"><a href="#prices" class="menu__link">Цены</a></li>
+            <li class="menu__item"><a href="#order" class="menu__link">Оформить заказ</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
+      <section id="business" class="business-block">
+        <div class="wrapper">
+          <h1 class="title business-block__title">
+            <span>Lorem ipsum</span> dolor sit amet consectetur <span>adipiscing</span>
+          </h1>
 
+          <p class="business-block__desc">
+            At vero eos et accusamus et iusto odio dignissimos ducimus!
+          </p>
+
+          <ul class="business-list">
+            <li class="business-list__item">Totam rem aperiam eaque ipsa</li>
+            <li class="business-list__item">Sit voluptatem accusantium doloremque laudantium</li>
+            <li class="business-list__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+          </ul>
+
+          <div class="business-block__btns">
+            <a href="#order" class="button order-button">Заказать</a>
+            <button type="button" class="button more-button">Подробнее</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="order" class="order">
+        <div class="wrapper">
+          <h2 class="title order__title">
+            Оформление <span>заказа</span>
+          </h2>
+
+          <p class="order__desc">
+            Перед оформлением формы ознакомьтесь с нашей схемой работы!
+          </p>
+
+          <ul class="order-scheme">
+            <li class="order-scheme__item">
+              <span class="fa fa-loupe order-scheme__icon"></span>
+              <h3 class="order-scheme__work-title">Lorem ipsum dolor sit amet</h3>
+            </li>
+            <li class="order-scheme__item">
+              <span class="fa fa-percent order-scheme__icon"></span>
+              <h3 class="order-scheme__work-title">Consecteturadipiscing elit</h3>
+            </li>
+            <li class="order-scheme__item">
+              <span class="fa fa-menu order-scheme__icon"></span>
+              <h3 class="order-scheme__work-title">Sed do euismod tempor</h3>
+            </li>
+            <li class="order-scheme__item">
+              <span class="fa fa-mail order-scheme__icon"></span>
+              <h3 class="order-scheme__work-title">Esse cillum dolore eu fugiat</h3>
+            </li>
+            <li class="order-scheme__item">
+              <span class="fa fa-money order-scheme__icon"></span>
+              <h3 class="order-scheme__work-title">Excepteur sint occaecat cupidatat non proident</h3>
+            </li>
+          </ul>
+
+          <form action="#" class="order-form">
+            <label for="system-choice"></label>
+            <!--select name="system" id="system-choice">
+              <option value="" disabled selected hidden>Выберите тип системы</option>
+              <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+              <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+              <option value="Et harum quidem">Et harum quidem</option>
+              <option value="Temporibus autem">Temporibus autem</option>
+              <option value="Itaque earum rerum">Itaque earum rerum</option>
+              <option value=""></option>
+              <option value=""></option>
+              <option value=""></option>
+            </select-->
+            <ul></ul>
+
+            <label for="user-email"></label>
+            <input type="text" id="user-email" name="userEmail" class="input order-form__useremail">
+
+            <label for="username"></label>
+            <input type="text" id="username" name="userName" class="input order-form__username">
+
+            <label for="discount-range"></label>
+            <input type="range" id="discount-range" name="userDiscount" class="order-form__discount">
+
+            <label>
+              <input type="file" name="userFile">
+            </label>
+
+            <button class="order-form__submit" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer>
+      <div class="wrapper">
+        <p class="copyright">
+          &copy; 2018 «LOREMIPSUM.NET» Все права защищены.
+        </p>
 
+        <ul class="payment-list">
+          <li class="payment-list__item">
+            <span class="payment-list__icon qiwi"></span>
+            Qiwi wallet
+          </li>
+          <li class="payment-list__item">
+            <span class="payment-list__icon yamoney"></span>
+            Yandex Money
+          </li>
+          <li class="payment-list__item">
+            <span class="payment-list__icon webmoney"></span>
+            Web Money
+          </li>
+        </ul>
+
+        <ul class="contacts-list">
+          <li class="contacts-list__item">
+            <a href="mailto:info@ipsum228.com" class="contacts-list__mail">info@ipsum228.com</a>
+          </li>
+          <li class="contacts-list__item">
+            <a href="https://vk.com" class="contacts-list__vkontakte" target="_blank">Мы вконтакте</a>
+          </li>
+        </ul>
+      </div>
     </footer>
 
     <script src="js/app.min.js"></script>
