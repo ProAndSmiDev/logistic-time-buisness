@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html lang="zxx">
   <head>
     <meta charset="UTF-8">
@@ -89,25 +90,32 @@
           </ul>
 
           <form action="#" class="order-form">
-            <label for="system-choice"></label>
-            <!--select name="system" id="system-choice">
-              <option value="" disabled selected hidden>Выберите тип системы</option>
-              <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
-              <option value="Nemo enim ipsam">Nemo enim ipsam</option>
-              <option value="Et harum quidem">Et harum quidem</option>
-              <option value="Temporibus autem">Temporibus autem</option>
-              <option value="Itaque earum rerum">Itaque earum rerum</option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-            </select-->
-            <ul></ul>
+            <fieldset class="order-form__system-choice-wrapper">
+              <button type="button" class="order-form__system-choice">
+                Выберите тип системы
+              </button>
+
+              <label>
+                <select name="system" class="order-form__system-choice-select">
+                  <option value="Выберите тип системы" selected disabled hidden>Выберите тип системы</option>
+                  <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+                  <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+                  <option value="Et harum quidem">Et harum quidem</option>
+                  <option value="Temporibus autem">Temporibus autem</option>
+                  <option value="Itaque earum rerum">Itaque earum rerum</option>
+                  <option value="some text one">some text one</option>
+                  <option value="some text two">some text two</option>
+                  <option value="some text three">some text three</option>
+                </select>
+              </label>
+            </fieldset>
 
             <label for="user-email"></label>
-            <input type="text" id="user-email" name="userEmail" class="input order-form__useremail">
+            <input type="text" id="user-email" name="userEmail" class="input order-form__useremail"
+                   placeholder="Ваш e-mail">
 
             <label for="username"></label>
-            <input type="text" id="username" name="userName" class="input order-form__username">
+            <input type="text" id="username" name="userName" class="input order-form__username" placeholder="Ваше имя">
 
             <label for="discount-range"></label>
             <input type="range" id="discount-range" name="userDiscount" class="order-form__discount">
