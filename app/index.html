@@ -99,7 +99,8 @@
                 </svg>
               </button>
 
-              <label>
+              <label class="sr-only">
+                Тип системы
                 <select name="system" class="order-form__system-choice-select">
                   <option value="Выберите тип системы" selected disabled hidden>Выберите тип системы</option>
                   <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
@@ -114,11 +115,11 @@
               </label>
             </fieldset>
 
-            <label for="user-email"></label>
+            <label for="user-email" class="sr-only">Электронная почта пользователя</label>
             <input type="text" id="user-email" name="userEmail" class="input order-form__useremail"
                    placeholder="Ваш e-mail">
 
-            <label for="username"></label>
+            <label for="username" class="sr-only">Имя пользователя</label>
             <input type="text"
                    id="username"
                    name="userName"
@@ -148,8 +149,7 @@
               <input type="file"
                      id="order-file"
                      name="userFile"
-                     class="order-form__file"
-                     placeholder="Прикрепить файл" style="display: none">
+                     class="order-form__file">
             </fieldset>
 
 
