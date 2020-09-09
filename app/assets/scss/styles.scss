@@ -78,6 +78,30 @@ input {
   }
 
   margin-left: 33px;
+
+  &[type=range] {
+    width: 100%;
+    background: transparent;
+    -webkit-appearance: none;
+
+    &::-webkit-slider {
+      &-thumb {
+        -webkit-appearance: none;
+      }
+    }
+
+    &:-ms-track {
+      width: 100%;
+      cursor: pointer;
+      color: transparent;
+      background: transparent;
+      border-color: transparent;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 ul, ol {

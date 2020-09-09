@@ -89,10 +89,14 @@
             </li>
           </ul>
 
-          <form action="#" class="order-form">
+          <form action="#" class="order-form" enctype="multipart/form-data">
             <fieldset class="order-form__system-choice-wrapper">
               <button type="button" class="order-form__system-choice">
-                Выберите тип системы
+                <span>Выберите тип системы</span>
+
+                <svg>
+                  <use xlink:href="./img/icons/sprite.svg#angle-down"></use>
+                </svg>
               </button>
 
               <label>
@@ -115,16 +119,41 @@
                    placeholder="Ваш e-mail">
 
             <label for="username"></label>
-            <input type="text" id="username" name="userName" class="input order-form__username" placeholder="Ваше имя">
+            <input type="text"
+                   id="username"
+                   name="userName"
+                   class="input order-form__username"
+                   placeholder="Ваше имя">
 
-            <label for="discount-range"></label>
-            <input type="range" id="discount-range" name="userDiscount" class="order-form__discount">
+            <fieldset class="order-form__discount-wrapper">
+              <label for="discount-range"
+                     class="order-form__discount-title">
+                Sed ut perspiciatis, unde omnis iste natus <span>75%</span>
+              </label>
+              <input type="range"
+                     id="discount-range"
+                     name="userDiscount"
+                     class="order-form__discount"
+                     min="0"
+                     max="100"
+                     step="1"
+                     value="75">
+            </fieldset>
 
-            <label>
-              <input type="file" name="userFile">
-            </label>
+            <fieldset class="order-form__file-wrapper">
+              <label for="order-file" class="order-form__file-button">
+                <span>Прикрепить файл</span>
+              </label>
 
-            <button class="order-form__submit" type="submit">Отправить</button>
+              <input type="file"
+                     id="order-file"
+                     name="userFile"
+                     class="order-form__file"
+                     placeholder="Прикрепить файл" style="display: none">
+            </fieldset>
+
+
+            <button class="button order-form__submit" type="submit">Отправить</button>
           </form>
         </div>
       </section>

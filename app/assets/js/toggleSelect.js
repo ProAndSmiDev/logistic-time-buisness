@@ -26,9 +26,11 @@
       return el.classList.remove('active');
     };
     getActiveButton(el, button, items) {
+      const buttonText = button.querySelector('span');
+
       button.classList.remove('active');
       items.classList.remove('active');
-      button.innerText = el.innerText;
+      buttonText.innerText = el.innerText;
 
       return button;
     };
