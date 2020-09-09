@@ -173,7 +173,17 @@
 
   &-form {
     display: flex;
-    margin-top: 80px;
+    @include media(phone) {
+      margin-top: 90px;
+      max-width: 400px;
+    }
+    @include media(pc) {
+      max-width: 100%;
+      margin-top: 100px;
+    }
+    @include media(desktop) {
+      margin-top: 80px;
+    }
     flex-flow: row wrap;
     justify-content: center;
 
@@ -197,7 +207,15 @@
       &-wrapper {
         border: 0;
         outline: 0;
-        width: 368px;
+        @include media(phone) {
+          width: 100%;
+        }
+        @include media(pc) {
+          width: 288px;
+        }
+        @include media(desktop) {
+          width: 368px;
+        }
         position: relative;
 
         svg {
@@ -292,8 +310,13 @@
         width: 100%;
         display: flex;
         margin-top: 30px;
-        max-width: 770px;
         flex-direction: column;
+        @include media(pc) {
+          max-width: 612px;
+        }
+        @include media(desktop) {
+          max-width: 770px;
+        }
       }
 
       &-title {
@@ -301,7 +324,12 @@
         display: flex;
         font-size: 18px;
         margin-bottom: 15px;
+        align-items: flex-end;
         justify-content: space-between;
+
+        span {
+          margin-left: 40px;
+        }
       }
     }
 
@@ -309,13 +337,20 @@
       &-wrapper {
         border: 0;
         width: 100%;
-        max-width: 370px;
         margin-top: 33px;
-        margin-left: 30px;
+        @include media(phone) {
+          margin-left: 0;
+        }
+        @include media(pc) {
+          max-width: 288px;
+          margin-left: 30px;
+        }
+        @include media(desktop) {
+          max-width: 370px;
+        }
       }
 
       &-button {
-        width: 100%;
         display: flex;
         color: #272733;
         font-size: 15px;
@@ -329,6 +364,14 @@
         text-transform: uppercase;
         background-color: rgba(255,255,255,.94);
         transition: background-color .4s ease-in-out, border-color .4s ease-in-out;
+        @include media(phablet) {
+          margin-left: auto;
+        }
+
+        @include media(pc) {
+          width: 100%;
+          margin-left: 0;
+        }
 
         &:hover {
           background-color: #3e9cdc;
@@ -342,7 +385,12 @@
         }
 
         span {
-          margin-left: 31px;
+          @include media(phone) {
+            margin-left: 20px;
+          }
+          @include media(desktop) {
+            margin-left: 31px;
+          }
         }
       }
     }
@@ -351,13 +399,18 @@
       width: 100%;
       color: #fff;
       font-size: 15px;
-      max-width: 370px;
       font-weight: 600;
       margin-top: 40px;
       border-width: 1px;
       border-radius: 3px;
       padding: 12px 14px;
       text-transform: uppercase;
+      @include media(pc) {
+        max-width: 288px;
+      }
+      @include media(desktop) {
+        max-width: 370px;
+      }
     }
   }
 }

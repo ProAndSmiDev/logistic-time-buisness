@@ -60,14 +60,30 @@ a {
 
 input {
   border: 0;
-  width: 368px;
   border-radius: 3px;
   padding: 12px 14px;
+  background-color: $bg-input;
   @include input-placeholder {
     @include font-styles($size: 18px, $color: #272733);
   }
-  background-color: $bg-input;
+
   @include font-styles($size: $placeholder-size, $color: $placeholder-color);
+
+  @include media(phone) {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  @include media(pc) {
+    width: 288px;
+    margin-top: 0;
+    margin-left: 33px;
+  }
+
+  @include media(desktop) {
+    width: 368px;
+  }
+
   &:focus {
     outline: 0;
     background-color: $focus-field-bg-color;
@@ -76,8 +92,6 @@ input {
     }
     @include font-styles($color: $focus-field-text-color);
   }
-
-  margin-left: 33px;
 
   &[type=range] {
     width: 100%;
