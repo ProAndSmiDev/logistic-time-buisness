@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Task from logistic time's company">
+    <meta name="keywords" content="task, company, interview">
+    <title>Logistic Time's task</title>
+    <meta name="author" content="AndSmi">
+    <meta name="copyright" content="Developed by AndSmi">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="logo-text">
+          loremipsum.<span>net</span>
+        </div>
+        <nav class="nav">
+          <button class="nav__burger">
+            <span></span>
+          </button>
+          <ul class="menu">
+            <li class="menu__item"><a href="#business" class="menu__link active">Бизнес</a></li>
+            <li class="menu__item"><a href="#about-us" class="menu__link">О нас</a></li>
+            <li class="menu__item"><a href="#prices" class="menu__link">Цены</a></li>
+            <li class="menu__item"><a href="#order" class="menu__link">Оформить заказ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="business" class="business-block">
+        <div class="wrapper">
+          <h1 class="title business-block__title">
+            <span>Lorem ipsum</span> dolor sit amet consectetur <span>adipiscing</span>
+          </h1>
+
+          <p class="business-block__desc">
+            At vero eos et accusamus et iusto odio dignissimos ducimus!
+          </p>
+
+          <ul class="business-list">
+            <li class="business-list__item">Totam rem aperiam eaque ipsa</li>
+            <li class="business-list__item">Sit voluptatem accusantium doloremque laudantium</li>
+            <li class="business-list__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+          </ul>
+
+          <div class="business-block__btns">
+            <a href="#order" class="button order-button pulse">Заказать</a>
+            <button type="button" class="button more-button">Подробнее</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="order" class="order">
+        <div class="wrapper">
+          <h2 class="title order__title">
+            Оформление <span>заказа</span>
+          </h2>
+
+          <p class="order__desc">
+            Перед заполнением формы ознакомьтесь с нашей схемой работы!
+          </p>
+
+          <ul class="order-scheme">
+            <li class="order-scheme__item">
+              <span class="order-scheme__icon loupe"></span>
+              <h3 class="order-scheme__work-title">Lorem ipsum dolor sit amet</h3>
+            </li>
+            <li class="order-scheme__item">
+              <span class="order-scheme__icon percent"></span>
+              <h3 class="order-scheme__work-title">Consecteturadipiscing elit</h3>
+            </li>
+            <li class="order-scheme__item">
+              <span class="order-scheme__icon file-plus"></span>
+              <h3 class="order-scheme__work-title">Sed do euismod tempor</h3>
+            </li>
+            <li class="order-scheme__item">
+              <span class="order-scheme__icon mail"></span>
+              <h3 class="order-scheme__work-title">Esse cillum dolore eu fugiat</h3>
+            </li>
+            <li class="order-scheme__item">
+              <span class="order-scheme__icon money"></span>
+              <h3 class="order-scheme__work-title">Excepteur sint occaecat cupidatat non proident</h3>
+            </li>
+          </ul>
+
+          <form action="#" class="order-form" enctype="multipart/form-data">
+            <fieldset class="order-form__system-choice-wrapper">
+              <button type="button" class="order-form__system-choice">
+                <span>Выберите тип системы</span>
+
+                <svg>
+                  <use xlink:href="./img/icons/sprite.svg#angle-down"></use>
+                </svg>
+              </button>
+
+              <label class="sr-only">
+                Тип системы
+                <select name="system" class="order-form__system-choice-select">
+                  <option value="Выберите тип системы" selected disabled hidden>Выберите тип системы</option>
+                  <option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
+                  <option value="Nemo enim ipsam">Nemo enim ipsam</option>
+                  <option value="Et harum quidem">Et harum quidem</option>
+                  <option value="Temporibus autem">Temporibus autem</option>
+                  <option value="Itaque earum rerum">Itaque earum rerum</option>
+                  <option value="some text one">some text one</option>
+                  <option value="some text two">some text two</option>
+                  <option value="some text three">some text three</option>
+                </select>
+              </label>
+            </fieldset>
+
+            <label for="user-email" class="sr-only">Электронная почта пользователя</label>
+            <input type="text" id="user-email" name="userEmail" class="input order-form__useremail"
+                   placeholder="Ваш e-mail">
+
+            <label for="username" class="sr-only">Имя пользователя</label>
+            <input type="text"
+                   id="username"
+                   name="userName"
+                   class="input order-form__username"
+                   placeholder="Ваше имя">
+
+            <fieldset class="order-form__discount-wrapper">
+              <label for="discount-range"
+                     class="order-form__discount-title">
+                Sed ut perspiciatis, unde omnis iste natus <span>75%</span>
+              </label>
+              <input type="range"
+                     id="discount-range"
+                     name="userDiscount"
+                     class="order-form__discount"
+                     min="0"
+                     max="100"
+                     step="1"
+                     value="75">
+            </fieldset>
+
+            <fieldset class="order-form__file-wrapper">
+              <label for="order-file" class="order-form__file-button">
+                <span>Прикрепить файл</span>
+              </label>
+
+              <input type="file"
+                     id="order-file"
+                     name="userFile"
+                     class="order-form__file">
+            </fieldset>
+
+
+            <button class="button order-form__submit" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrapper">
+        <ul class="footer-list">
+          <li class="footer-list__item">
+            <p class="copyright">
+              &copy; 2018 «LOREMIPSUM.NET» Все права защищены.
+            </p>
+          </li>
+
+          <li class="footer-list__item">
+            <ul class="payment-list">
+              <li class="payment-list__item">
+                <span class="payment-list__icon qiwi"></span>
+                Qiwi wallet
+              </li>
+              <li class="payment-list__item">
+                <span class="payment-list__icon yamoney"></span>
+                Yandex Money
+              </li>
+              <li class="payment-list__item">
+                <span class="payment-list__icon webmoney"></span>
+                Web Money
+              </li>
+            </ul>
+          </li>
+
+          <li class="footer-list__item">
+            <ul class="contacts-list">
+              <li class="contacts-list__item">
+                <a href="mailto:info@ipsum228.com" class="contacts-list__link mail">info@ipsum228.com</a>
+              </li>
+              <li class="contacts-list__item">
+                <a href="https://vk.com" class="contacts-list__link vkontakte" target="_blank">Мы вконтакте</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
