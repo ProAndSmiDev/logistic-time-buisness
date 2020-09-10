@@ -1,0 +1,81 @@
+.contacts-list {
+  width: 100%;
+  align-items: center;
+
+  @include media(phone) {
+    justify-content: center;
+  }
+  @include media(pc) {
+    justify-content: flex-end;
+  }
+
+  &__item {
+    line-height: 1;
+
+    @include media(phone) {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+    @include media(pc) {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+    @include media(desktop) {
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    @include media(pc) {
+      width: 15px;
+      height: 13px;
+      font-size: 0;
+      display: inline-block;
+    }
+    @include media(desktop) {
+      width: auto;
+      height: auto;
+      font-size: 13px;
+    }
+
+
+    &:before {
+      top: 0;
+      content: '';
+      height: 13px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      @include media(phone) {
+        margin-right: 10px;
+      }
+      @include media(pc) {
+        margin-right: 0;
+        position: static;
+      }
+      @include media(desktop) {
+        position: absolute;
+      }
+    }
+
+    &.vkontakte {
+      &:before {
+        left: -20px;
+        width: 11px;
+        background-image: url(../img/icons/vk.png);
+      }
+    }
+
+    &.mail {
+      &:before {
+        left: -25px;
+        width: 15px;
+        background-image: url(../img/icons/mail.png);
+      }
+    }
+  }
+}

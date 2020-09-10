@@ -20,6 +20,15 @@ body {
   min-height: 100vh;
   position: relative;
   @include font-styles($text-size, $text-color, $font-weight, $lh-size, $font-family);
+  @include media(phone) {
+    padding-bottom: 245px;
+  }
+  @include media(phone-wide) {
+    padding-bottom: 156px;
+  }
+  @include media(pc) {
+    padding-bottom: 78px;
+  }
 }
 
 .wrapper {
@@ -173,6 +182,4 @@ input, textarea, select, button {
 
 @import "./components/main";
 
-footer {
-  display: none;
-}
+@import "./components/footer";

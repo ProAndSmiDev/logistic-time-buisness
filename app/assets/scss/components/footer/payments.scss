@@ -1,0 +1,84 @@
+.payment-list {
+  width: 100%;
+  flex-wrap: wrap;
+  @include media(phone) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  @include media(phone-wide) {
+    flex-direction: row;
+  }
+  @include media(pc) {
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+  @include media(desktop) {
+    margin-top: -3px;
+    padding-left: 2px;
+  }
+
+  &__item {
+    color: #fff;
+    position: relative;
+    @include media(phone) {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+    @include media(phone-wide) {
+      margin-right: 45px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+    @include media(pc) {
+      margin-right: 40px;
+    }
+    @include media(desktop) {
+      margin-right: 68px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n + 4) {
+      margin-top: 5px;
+    }
+  }
+
+  &__icon {
+    content: '';
+    height: 15px;
+    display: block;
+    position: absolute;
+    background-image: url(../img/icons/payments.png);
+    @include media(phone) {
+      top: -3px;
+      left: -20px;
+    }
+    @include media(pc) {
+      top: 0;
+      left: -22px;
+    }
+    @include media(desktop) {
+      left: -25px;
+    }
+
+    &.qiwi {
+      width: 15px;
+      background-position: 0 0;
+    }
+
+    &.yamoney {
+      width: 13px;
+      background-position: 13px 0;
+    }
+
+    &.webmoney {
+      width: 15px;
+      background-position: 26px 0;
+    }
+  }
+}
