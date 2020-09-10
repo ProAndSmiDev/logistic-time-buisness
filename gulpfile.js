@@ -11,6 +11,7 @@ const gulp = require('gulp'),
   ttf2woff = require('gulp-ttf2woff'),
   ttf2woff2 = require('gulp-ttf2woff2'),
   sync = require('browser-sync'),
+  babel = require('gulp-babel'),
   root = {
     'dev': './app',
     'prod': './public'
@@ -58,6 +59,9 @@ gulp.task('sass', () => {
 gulp.task('js', () => {
   return gulp.src(dev.js)
     .pipe(concat('app.min.js'))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(uglES)
     .pipe(gulp.dest(prod.js));
 });
