@@ -27,5 +27,16 @@
     "node-sass": "^4.14.1"
   },
   "author": "AndSmi",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProAndSmiDev/logisticTime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ProAndSmiDev/logisticTime/issues"
+  },
+  "homepage": "https://github.com/ProAndSmiDev/logisticTime#readme"
 }
