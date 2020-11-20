@@ -99,17 +99,16 @@
 
       &:before,
       &:after {
-        position: relative;
+        top: 50%;
+        position: absolute;
       }
 
       &:before {
-        top: 1px;
-        transform: rotateZ(-45deg);
+        transform: translateY(-50%) rotateZ(-45deg);
       }
 
       &:after {
-        bottom: 0;
-        transform: rotateZ(45deg);
+        transform: translateY(-50%) rotateZ(45deg);
       }
     }
 
