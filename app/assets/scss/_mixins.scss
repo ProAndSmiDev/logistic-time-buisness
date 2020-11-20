@@ -44,8 +44,10 @@
   &.placeholder {
     @content;
   }
-  &:-moz-placeholder {
+  &:-moz-placeholder,
+  &::-moz-placeholder {
     @content;
+    opacity: 1;
   }
   &:-ms-input-placeholder {
     @content;

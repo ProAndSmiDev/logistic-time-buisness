@@ -21,10 +21,10 @@ body {
   position: relative;
   @include font-styles($text-size, $text-color, $font-weight, $lh-size, $font-family);
   @include media(phone) {
-    padding-bottom: 245px;
+    padding-bottom: 230px;
   }
   @include media(phone-wide) {
-    padding-bottom: 156px;
+    padding-bottom: 155px;
   }
   @include media(pc) {
     padding-bottom: 78px;

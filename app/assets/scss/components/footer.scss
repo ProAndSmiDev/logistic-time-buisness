@@ -15,7 +15,7 @@ footer {
   }
   @include media(pc) {
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   &__item {
@@ -45,7 +45,7 @@ footer {
         max-width: 325px;
       }
       &:last-child {
-        max-width: 262px;
+        max-width: 265px;
       }
     }
 
