@@ -14,7 +14,7 @@ const gulp = require('gulp'),
   babel = require('gulp-babel'),
   root = {
     'dev': './app',
-    'prod': './public'
+    'prod': './docs'
   },
   dev = {
     'html': root.dev + '/index.html',
